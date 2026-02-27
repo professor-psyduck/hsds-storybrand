@@ -318,7 +318,7 @@ section {
 /* ===== Hero Section ===== */
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  padding: calc(80px + var(--space-6)) var(--space-5) var(--space-6);
+  padding: calc(80px + var(--space-10)) var(--space-5) var(--space-10);
   text-align: center;
 }
 
