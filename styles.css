@@ -318,17 +318,17 @@ section {
 /* ===== Hero Section ===== */
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  padding: 80px var(--space-5) 0;
+  padding: calc(80px + var(--space-8)) var(--space-5) var(--space-8);
   text-align: center;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: calc(80px + var(--space-16)) var(--space-8) var(--space-10);
+    padding: calc(80px + var(--space-10)) var(--space-8) var(--space-10);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
