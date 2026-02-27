@@ -330,6 +330,7 @@ section {
 
 .hero .container {
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h1 {
