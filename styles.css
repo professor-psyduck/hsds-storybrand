@@ -318,13 +318,13 @@ section {
 /* ===== Hero Section ===== */
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  padding: calc(80px + var(--space-12)) var(--space-5) var(--space-12);
+  padding: calc(80px + var(--space-12)) var(--space-5) var(--space-8);
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: calc(80px + var(--space-16)) var(--space-8) var(--space-16);
+    padding: calc(80px + var(--space-16)) var(--space-8) var(--space-10);
   }
 }
 
@@ -366,7 +366,14 @@ section {
 
 /* ===== Stakes Section ===== */
 .stakes {
-  background: var(--color-bg);
+  background: #e8f2f2;
+  padding-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .stakes {
+    padding-top: var(--space-10);
+  }
 }
 
 .stakes h2 {
@@ -501,11 +508,14 @@ section {
   max-width: var(--max-width-content);
   margin-left: auto;
   margin-right: auto;
+  text-wrap: balance;
 }
 
 @media (min-width: 768px) {
   .plan h2 {
     margin-bottom: var(--space-10);
+    white-space: nowrap;
+    text-wrap: nowrap;
   }
 }
 
