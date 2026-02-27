@@ -320,6 +320,10 @@ section {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
   padding: calc(80px + var(--space-12)) var(--space-5) var(--space-8);
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
