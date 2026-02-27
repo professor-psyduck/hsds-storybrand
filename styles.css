@@ -729,6 +729,8 @@ section {
 
 .cta-image {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .cta-image img {
@@ -737,6 +739,7 @@ section {
   max-height: 300px;
   object-fit: cover;
   border-radius: var(--radius-lg);
+  margin: 0 auto;
 }
 
 .cta-content {
