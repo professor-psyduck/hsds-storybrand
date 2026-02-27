@@ -320,16 +320,18 @@ section {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
   padding: 80px var(--space-5) var(--space-6);
   text-align: center;
-  min-height: 100svh;
-  min-height: 100vh; /* fallback for older browsers */
+  height: 100svh;
+  height: 100vh; /* fallback for older browsers */
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .hero {
     padding: 80px var(--space-8) var(--space-10);
+    height: auto;
     min-height: 60vh;
   }
 }
