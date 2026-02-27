@@ -318,12 +318,8 @@ section {
 /* ===== Hero Section ===== */
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  padding: calc(80px + var(--space-8)) var(--space-5) var(--space-8);
+  padding: calc(80px + var(--space-6)) var(--space-5) var(--space-6);
   text-align: center;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {
