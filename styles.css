@@ -319,9 +319,8 @@ section {
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
   padding: 80px var(--space-5) var(--space-6);
-  text-align: center;
-  height: 100svh;
-  height: 100vh; /* fallback for older browsers */
+  min-height: 100svh;
+  min-height: 100vh; /* fallback */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,13 +330,34 @@ section {
 @media (min-width: 768px) {
   .hero {
     padding: 80px var(--space-8) var(--space-10);
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
 .hero .container {
-  max-width: 800px;
+  max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-10);
+    text-align: left;
+  }
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero h1 {
@@ -353,6 +373,12 @@ section {
   margin: 0 auto var(--space-8);
 }
 
+@media (min-width: 768px) {
+  .hero-sub {
+    margin: 0 0 var(--space-8);
+  }
+}
+
 .hero-cta {
   display: flex;
   gap: var(--space-4);
@@ -360,16 +386,41 @@ section {
   flex-wrap: wrap;
 }
 
+@media (min-width: 768px) {
+  .hero-cta {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-cta {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-cta .btn {
     width: 100%;
     max-width: 280px;
   }
+}
+
+.hero-image {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 280px;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    max-width: 380px;
+  }
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== Stakes Section ===== */
