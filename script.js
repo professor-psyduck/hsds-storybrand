@@ -50,7 +50,44 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.stake-card, .plan-step, .service-card, .success-item').forEach(el => {
+document.querySelectorAll('.stake-card, .plan-step, .service-card, .success-item, .portfolio-card').forEach(el => {
   el.style.animationPlayState = 'paused';
   observer.observe(el);
 });
+
+// Contact form submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        const ctaContent = contactForm.closest('.cta-content');
+        ctaContent.innerHTML = `
+          <div class="form-confirmation">
+            <svg class="confirmation-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Thanks for reaching out!</h3>
+            <p>I'll get back to you within 1-2 business days.<br>Looking forward to learning about your business.</p>
+          </div>`;
+      } else {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email me directly.');
+      }
+    } catch {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again or email me directly.');
+    }
+  });
+}

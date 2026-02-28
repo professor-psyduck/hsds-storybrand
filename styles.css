@@ -738,8 +738,8 @@ section {
 
 .cta-image img {
   width: auto;
-  max-width: 220px;
-  max-height: 300px;
+  max-width: 260px;
+  max-height: 380px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   margin: 0 auto;
@@ -772,6 +772,36 @@ section {
 .cta-note {
   font-size: 0.9375rem;
   color: var(--color-text-muted);
+}
+
+/* Form Confirmation */
+.form-confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 280px;
+}
+
+.confirmation-icon {
+  color: var(--color-primary);
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-5);
+}
+
+.form-confirmation h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.form-confirmation p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
 }
 
 /* Contact Form */
