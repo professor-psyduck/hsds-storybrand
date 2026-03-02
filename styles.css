@@ -1016,13 +1016,13 @@ button:focus-visible,
 
 .portfolio-hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-  padding: calc(80px + var(--space-10)) var(--space-5) var(--space-8);
+  padding: calc(80px + var(--space-6)) var(--space-5) var(--space-5);
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .portfolio-hero {
-    padding: calc(80px + var(--space-12)) var(--space-8) var(--space-10);
+    padding: calc(80px + var(--space-8)) var(--space-8) var(--space-6);
   }
 }
 
