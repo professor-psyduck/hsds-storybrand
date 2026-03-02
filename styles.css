@@ -226,6 +226,14 @@ section {
   font-size: 0.875rem;
 }
 
+.nav-links .btn-primary {
+  color: white;
+}
+
+.nav-links .btn-primary:hover {
+  color: white;
+}
+
 /* ===== Navigation ===== */
 .nav {
   position: fixed;
