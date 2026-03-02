@@ -692,6 +692,55 @@ section {
 }
 
 
+/* ===== SEO Audit Callout ===== */
+.seo-audit-callout {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+}
+
+.audit-callout-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .audit-callout-layout {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    gap: var(--space-10);
+  }
+}
+
+.audit-callout-text h2 {
+  color: white;
+  margin-bottom: var(--space-3);
+}
+
+.audit-callout-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.audit-callout-action {
+  flex-shrink: 0;
+}
+
+.audit-callout-action .btn {
+  background: white;
+  color: var(--color-primary-dark);
+  border-color: white;
+}
+
+.audit-callout-action .btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 /* ===== Success Section ===== */
 .success {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
