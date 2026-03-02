@@ -691,6 +691,28 @@ section {
   font-weight: 500;
 }
 
+/* ===== SEO Audit Callout ===== */
+.seo-audit-callout {
+  background: var(--color-bg-alt);
+  text-align: center;
+}
+
+.audit-callout-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.audit-callout-content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.audit-callout-content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
 /* ===== Success Section ===== */
 .success {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
