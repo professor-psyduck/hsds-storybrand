@@ -183,7 +183,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-container">
-      <a href="#" class="logo"><img src="logo.png" alt="Human Scale Digital Solutions" class="logo-img"></a>
+      <a href="/" class="logo"><img src="logo.png" alt="Human Scale Digital Solutions" class="logo-img"></a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -255,7 +255,10 @@
     <div class="container">
       <div class="guide-layout">
         <div class="guide-photo">
-          <img src="https://images.squarespace-cdn.com/content/v1/65c40b8eee83f035b4331966/12e99288-6b5b-4789-ae00-49ed91c9b27f/Ramzi+Sophie+casual.jpg?format=750w" alt="Ramzi helping a client" />
+          <picture>
+            <source srcset="about-photo.webp" type="image/webp">
+            <img src="about-photo.jpg" alt="Ramzi and his dog Sophie" loading="lazy" width="750" height="500" />
+          </picture>
         </div>
         <div class="guide-text">
           <h2>Hi, I'm Ramzi.</h2>
@@ -382,7 +385,10 @@
     <div class="container">
       <div class="cta-layout">
         <div class="cta-image">
-          <img src="https://images.squarespace-cdn.com/content/v1/65c40b8eee83f035b4331966/b73c650e-64b1-4037-b30b-f5fbb7288cda/Ramzi+Headshot+1.jpg?format=750w" alt="Ramzi" />
+          <picture>
+            <source srcset="headshot.webp" type="image/webp">
+            <img src="headshot.jpg" alt="Ramzi Nakhleh" loading="lazy" width="750" height="1125" />
+          </picture>
         </div>
         <div class="cta-content">
           <h2>Ready to Stop Worrying About Your Web Presence?</h2>
@@ -390,13 +396,16 @@
           
           <form action="https://formspree.io/f/mojnrgyl" method="POST" class="contact-form">
             <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required>
+              <label for="name" class="sr-only">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required>
+              <label for="email" class="sr-only">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <textarea name="message" placeholder="Tell me a bit about your business and what you're looking for..." rows="4" required></textarea>
+              <label for="message" class="sr-only">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a bit about your business and what you're looking for..." rows="4" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-large">Send Message</button>
           </form>

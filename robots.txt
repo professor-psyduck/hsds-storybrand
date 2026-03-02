@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /seo-audit/
+
+Sitemap: https://humanscaledigitalsolutions.com/sitemap.xml
