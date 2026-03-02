@@ -413,6 +413,7 @@ section {
 .stakes {
   background: #e8f2f2;
   padding-top: var(--space-8);
+  margin-top: -2px;
 }
 
 @media (min-width: 768px) {
