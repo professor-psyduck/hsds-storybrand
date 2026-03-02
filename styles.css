@@ -318,6 +318,8 @@ section {
 /* ===== Hero Section ===== */
 .hero {
   padding-top: 80px; /* nav height */
+  margin: 0;
+  padding-bottom: 0;
 }
 
 .hero-layout {
@@ -393,6 +395,9 @@ section {
 
 .hero-image {
   min-height: 300px;
+  background: #3a3a3a;
+  line-height: 0;
+  font-size: 0;
 }
 
 @media (min-width: 768px) {
@@ -412,7 +417,7 @@ section {
 /* ===== Stakes Section ===== */
 .stakes {
   background: #e8f2f2;
-  padding-top: var(--space-6);
+  padding-top: var(--space-8);
 }
 
 @media (min-width: 768px) {
